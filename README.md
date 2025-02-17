@@ -66,7 +66,7 @@ The app is styled using Tailwind CSS. Tailwind provides utility-first classes th
 
 The application is deployed on Vercel (or Netlify, depending on your preference). You can view the deployed application here:
 
-Vercel URL: https://your-vercel-app-url
+Vercel URL: https://item-list-application.vercel.app/ and https://item-list-application-git-main-nijas-mas-projects.vercel.app/
 
 8.Extra Features
 

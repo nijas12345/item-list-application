@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Item } from "../types/item";
+import { toast } from "react-toastify"; // Ensure to import toast
 
 interface ItemEditFormProps {
   item: Item;
@@ -17,6 +18,12 @@ const ItemEditForm: React.FC<ItemEditFormProps> = ({ item, onSave, onCancel }) =
   }, [item]);
 
   const handleSubmit = () => {
+    // Validation based on the provided example
+    if (!title) return toast.error("Enter title");
+    if (title.length < 3) return toast.error("Title must be more than 3 letters");
+    if (!body) return toast.error("Enter description");
+    if (body.length < 5) return toast.error("Description must be more than 5 letters");
+
     const updatedItem = { ...item, title, body };
     onSave(updatedItem);
   };
