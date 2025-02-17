@@ -21,14 +21,14 @@ const ItemForm: React.FC<ItemFormProps> = ({
         type="text"
         value={newTitle}
         onChange={(e) => setNewTitle(e.target.value)}
-        className="p-2 w-full mb-2 text-black"
-        placeholder="Title"
+        className="p-2 w-full mb-2 text-black rounded-sm"
+        placeholder="Enter the Title"
       />
       <textarea
         value={newBody}
         onChange={(e) => setNewBody(e.target.value)}
-        className="p-2 w-full mb-4 text-black"
-        placeholder="Body"
+        className="p-2 w-full mb-4 text-black rounded-sm"
+        placeholder="Enter the Description"
       />
       <button
         onClick={addItem}
